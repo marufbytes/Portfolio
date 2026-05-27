@@ -1,0 +1,28 @@
+/* Smooth scrolling when clicking navbar links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Common body font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Small hover effect for cards */
+.card-hover {
+  transition: 0.3s;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+}
+
+/* Mobile menu link spacing */
+#mobileMenu a {
+  display: block;
+}
+
+/* Make image responsive */
+img {
+  max-width: 100%;
+}
