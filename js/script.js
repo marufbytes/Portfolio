@@ -1,7 +1,7 @@
-// This function opens and closes the mobile menu
+// This function opens and closes the mobile/tablet menu
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
 
-  // hidden class means menu is not showing
+  // Toggle means: show the menu if hidden, or hide it if showing
   menu.classList.toggle("hidden");
 }

@@ -2,83 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- This makes the page responsive on mobile and tablet -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>About Me | Maruf Ahammed</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Your own CSS file -->
+  <!-- Common custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Temporary favicon. Later you can replace this with your M logo -->
-  <link rel="icon" type="image/png" href="assets/images/profile_picture.jpg" />
+  <!-- Browser tab logo -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
 </head>
-
 <body class="bg-slate-50 text-slate-900">
 
-  <!-- =========================
-       HEADER / NAVBAR
-       Same header will be used on every page
-  ========================== -->
-  <header class="bg-white/95 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex justify-between items-center">
-
-      <!-- Website Name / Logo -->
-      <a href="index.html" class="text-2xl font-bold text-blue-600">
-        Maruf
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="Maruf Logo" class="w-11 h-11 rounded-full" />
+        <div class="hidden sm:block">
+          <p class="text-xl font-bold text-slate-900 leading-5">Maruf</p>
+          <p class="text-xs text-slate-500">Portfolio</p>
+        </div>
       </a>
 
-      <!-- Desktop Navbar: Visible only on large screen -->
       <ul class="hidden lg:flex gap-8 font-medium text-slate-700">
-        <li>
-          <a href="index.html" class="hover:text-blue-600">Home</a>
-        </li>
-
-        <!-- Current page active color -->
-        <li>
-          <a href="about.html" class="text-blue-600">About</a>
-        </li>
-
-        <li>
-          <a href="skills.html" class="hover:text-blue-600">Skills</a>
-        </li>
-
-        <li>
-          <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        </li>
-
-        <li>
-          <a href="publications.html" class="hover:text-blue-600">Publications</a>
-        </li>
-
-        <li>
-          <a href="blogs.html" class="hover:text-blue-600">Blogs</a>
-        </li>
-
-        <li>
-          <a href="contact.html" class="hover:text-blue-600">Contact</a>
-        </li>
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="about.html" class="text-blue-600">About</a></li>
+        <li><a href="skills.html" class="hover:text-blue-600">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="publications.html" class="hover:text-blue-600">Publications</a></li>
+        <li><a href="blogs.html" class="hover:text-blue-600">Blogs</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
       </ul>
 
-      <!-- Download CV Button: Visible on large screen -->
       <a href="assets/files/Maruf_Ahammed_CV.pdf" download
-         class="hidden lg:inline-block bg-blue-600 text-white px-5 py-2 rounded-xl font-semibold hover:bg-blue-700">
+         class="hidden lg:inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
         Download CV
       </a>
 
-      <!-- Three-line Menu Button: Visible on mobile and tablet -->
-      <button onclick="toggleMenu()"
-              class="lg:hidden text-3xl text-slate-800"
-              aria-label="Open menu">
-        ☰
-      </button>
+      <button onclick="toggleMenu()" class="lg:hidden text-3xl text-slate-800" aria-label="Open Menu">☰</button>
     </nav>
 
-    <!-- Mobile / Tablet Menu -->
     <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-5">
       <ul class="space-y-4 font-medium text-slate-700">
         <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
@@ -88,10 +54,9 @@
         <li><a href="publications.html" class="hover:text-blue-600">Publications</a></li>
         <li><a href="blogs.html" class="hover:text-blue-600">Blogs</a></li>
         <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
-
         <li>
           <a href="assets/files/Maruf_Ahammed_CV.pdf" download
-             class="inline-block bg-blue-600 text-white px-5 py-2 rounded-xl font-semibold hover:bg-blue-700">
+             class="inline-block bg-blue-600 text-white px-5 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
             Download CV
           </a>
         </li>
@@ -99,278 +64,206 @@
     </div>
   </header>
 
-
-  <!-- =========================
-       PAGE TITLE SECTION
-  ========================== -->
-  <section class="bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 md:py-16 text-center">
-      <p class="text-blue-600 font-semibold mb-3">Get to know me</p>
-
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        About Me
-      </h1>
-
-      <p class="text-slate-600 max-w-2xl mx-auto leading-7">
-        Learn more about my academic background, interests, and the type of
-        software solutions I want to build.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- =========================
-       MAIN ABOUT SECTION
-  ========================== -->
   <main>
 
-    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-14 md:py-20">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- ================= ABOUT HERO ================= -->
+    <section class="bg-gradient-to-br from-white via-blue-50 to-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 md:py-12">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div>
+            <div class="w-12 h-1 bg-blue-600 rounded-full mb-6"></div>
+            <p class="text-blue-600 font-semibold mb-4">ABOUT ME</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
+              Growing Through <span class="text-blue-600">Development & Research</span>
+            </h1>
+            <p class="text-slate-600 text-base md:text-lg leading-8 mb-7">
+              I am Maruf Ahammed, a BSc in Computer Science and Engineering student at
+              American International University-Bangladesh. I enjoy software development,
+              research, problem solving and learning new technologies.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="projects.html" class="bg-blue-600 text-white text-center px-7 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">View Projects</a>
+              <a href="contact.html" class="bg-white border border-slate-300 text-center px-7 py-3 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-600 transition">Contact Me</a>
+            </div>
+          </div>
 
-        <!-- Profile Image -->
-        <div class="flex justify-center lg:justify-start">
-          <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-lg border border-slate-200">
-            <img src="assets/images/profile_picture.jpg"
-                 alt="Maruf Ahammed"
-                 class="w-72 h-80 sm:w-96 sm:h-[460px] object-cover rounded-2xl" />
+          <div class="bg-white border border-slate-200 rounded-3xl p-5 md:p-7 shadow-sm">
+            <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start mb-7">
+              <img src="assets/images/profile_picture.jpg" alt="Maruf Ahammed" class="w-32 h-36 object-cover rounded-2xl" />
+              <div class="text-center sm:text-left">
+                <h2 class="text-2xl font-bold mb-2">Maruf Ahammed</h2>
+                <p class="text-blue-600 font-semibold leading-7 mb-3">Aspiring Software Engineer & Web Developer</p>
+                <p class="text-slate-500">Research Enthusiast</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-slate-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">UNIVERSITY</p><p class="font-bold">AIUB</p></div>
+              <div class="bg-blue-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">SEMESTER</p><p class="font-bold text-blue-600">9th</p></div>
+              <div class="bg-slate-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">CGPA</p><p class="font-bold">3.89</p></div>
+              <div class="bg-slate-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">LOCATION</p><p class="font-bold">Dhaka</p></div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- About Text -->
-        <div>
-          <p class="text-blue-600 font-semibold mb-3">Hello, I am Maruf</p>
-
-          <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
-            CSE Student and Aspiring Software Developer
-          </h2>
-
+    <!-- ================= JOURNEY AND GOAL ================= -->
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-10 md:py-14">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <article class="bg-white border border-slate-200 rounded-2xl p-7 lg:col-span-2 transition duration-300 hover:shadow-lg">
+          <div class="w-12 h-1 bg-blue-600 rounded-full mb-6"></div>
+          <h2 class="text-3xl font-bold mb-5">My Journey</h2>
           <p class="text-slate-600 leading-8 mb-5">
-            I am a Computer Science and Engineering student at AIUB. I am
-            interested in developing professional web applications, backend
-            systems, and database-driven software solutions.
+            I started with programming fundamentals and gradually moved toward web development,
+            database-connected applications and responsive interface design. Academic and
+            personal projects have helped me work with several technologies and user-based systems.
           </p>
-
-          <p class="text-slate-600 leading-8 mb-8">
-            My goal is to build applications that are clean, useful, reliable,
-            and easy for users to understand. I also have an interest in
-            research, problem solving, and learning modern technologies.
+          <p class="text-slate-600 leading-8">
+            Along with development, I enjoy analytical work and research activities.
+            I want to keep improving by building meaningful projects and exploring AI/ML-based research.
           </p>
+        </article>
 
-          <!-- Simple Personal Information Cards -->
-          <div class="grid sm:grid-cols-2 gap-4 mb-8">
-
-            <div class="bg-white border border-slate-200 rounded-xl p-4">
-              <p class="text-sm text-slate-500 mb-1">Name</p>
-              <p class="font-semibold">Maruf Ahammed</p>
-            </div>
-
-            <div class="bg-white border border-slate-200 rounded-xl p-4">
-              <p class="text-sm text-slate-500 mb-1">Location</p>
-              <p class="font-semibold">Cumilla, Bangladesh</p>
-            </div>
-
-            <div class="bg-white border border-slate-200 rounded-xl p-4">
-              <p class="text-sm text-slate-500 mb-1">University</p>
-              <p class="font-semibold">AIUB</p>
-            </div>
-
-            <div class="bg-white border border-slate-200 rounded-xl p-4">
-              <p class="text-sm text-slate-500 mb-1">Focus</p>
-              <p class="font-semibold">Backend & Database</p>
-            </div>
-
-          </div>
-
-          <!-- Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="projects.html"
-               class="bg-blue-600 text-white text-center px-6 py-3 rounded-xl font-semibold hover:bg-blue-700">
-              View My Projects
-            </a>
-
-            <a href="contact.html"
-               class="border border-slate-300 text-center px-6 py-3 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-600">
-              Contact Me
-            </a>
-          </div>
-        </div>
-
+        <article class="bg-blue-600 text-white rounded-2xl p-7 transition duration-300 hover:shadow-lg">
+          <p class="text-blue-100 text-sm font-semibold mb-6">FUTURE GOAL</p>
+          <h2 class="text-2xl font-bold mb-5">Software Engineering & AI/ML Research</h2>
+          <p class="text-blue-100 leading-8">
+            I want to become a software engineer and work on AI/ML-based research,
+            data analysis and practical software solutions that solve real problems.
+          </p>
+        </article>
       </div>
     </section>
 
-
-    <!-- =========================
-         EDUCATION SECTION
-    ========================== -->
-    <section class="bg-white border-y border-slate-200 py-14 md:py-16">
+    <!-- ================= ACADEMIC TIMELINE: ADDED SSC AND HSC HERE ================= -->
+    <section class="bg-white border-y border-slate-200 py-12 md:py-14">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
-
-        <div class="text-center mb-10">
-          <p class="text-blue-600 font-semibold mb-3">Academic Background</p>
-
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">
-            Education
-          </h2>
-
-          <p class="text-slate-600">
-            My academic journey in Computer Science and Engineering.
+        <div class="mb-9">
+          <div class="w-12 h-1 bg-blue-600 rounded-full mb-6"></div>
+          <p class="text-blue-600 font-semibold mb-3">EDUCATION</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-3">Academic Background</h2>
+          <p class="text-slate-600 leading-7 max-w-2xl">
+            My educational journey from secondary studies to my current undergraduate programme.
           </p>
         </div>
 
-        <!-- Education Card -->
-        <div class="max-w-3xl mx-auto bg-slate-50 border border-slate-200 rounded-2xl p-6 md:p-8 card-hover">
-          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
-
-            <div>
-              <h3 class="text-xl md:text-2xl font-bold mb-2">
-                Bachelor of Science in Computer Science and Engineering
-              </h3>
-
-              <p class="text-blue-600 font-semibold mb-3">
-                American International University-Bangladesh (AIUB)
-              </p>
-
-              <p class="text-slate-600 leading-7">
-                Studying core computer science subjects, software development,
-                databases, web technologies, and problem solving.
-              </p>
+        <div class="grid lg:grid-cols-3 gap-6">
+          <article class="bg-blue-600 text-white rounded-2xl p-7">
+            <div class="flex justify-between items-center mb-6">
+              <span class="bg-white/15 border border-white/20 px-3 py-2 rounded-full text-sm font-semibold">Current</span>
+              <span class="text-blue-100 font-semibold">9th Semester</span>
             </div>
+            <p class="text-blue-100 font-semibold mb-3">UNDERGRADUATE</p>
+            <h3 class="text-xl font-bold leading-8 mb-3">BSc in Computer Science and Engineering</h3>
+            <p class="text-blue-100 leading-7 mb-6">American International University-Bangladesh</p>
+            <div class="bg-white/10 rounded-xl p-4">
+              <p class="text-sm text-blue-100 mb-1">Current CGPA</p>
+              <p class="text-2xl font-bold">3.89</p>
+            </div>
+          </article>
 
-            <!-- Change this later with your real duration -->
-            <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap">
-              Ongoing
-            </span>
+          <!-- HSC: Edit this card later if your college spelling changes -->
+          <article class="bg-slate-50 border border-slate-200 rounded-2xl p-7 transition duration-300 hover:shadow-lg">
+            <div class="flex justify-between items-center mb-6">
+              <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-full text-sm font-semibold">HSC</span>
+              <span class="text-slate-500 font-semibold">2022</span>
+            </div>
+            <p class="text-blue-600 font-semibold mb-3">HIGHER SECONDARY CERTIFICATE</p>
+            <h3 class="text-xl font-bold leading-8 mb-3">Milestone College</h3>
+            <p class="text-slate-600 leading-7 mb-6">Group: Science</p>
+            <p class="text-sm text-slate-500">Passing Year: 2022</p>
+          </article>
 
-          </div>
+          <!-- SSC: Edit this card later if your school spelling changes -->
+          <article class="bg-slate-50 border border-slate-200 rounded-2xl p-7 transition duration-300 hover:shadow-lg">
+            <div class="flex justify-between items-center mb-6">
+              <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-full text-sm font-semibold">SSC</span>
+              <span class="text-slate-500 font-semibold">2020</span>
+            </div>
+            <p class="text-blue-600 font-semibold mb-3">SECONDARY SCHOOL CERTIFICATE</p>
+            <h3 class="text-xl font-bold leading-8 mb-3">Maniknagar Model High School</h3>
+            <p class="text-slate-600 leading-7 mb-6">Group: Science</p>
+            <p class="text-sm text-slate-500">Passing Year: 2020</p>
+          </article>
         </div>
-
       </div>
     </section>
 
-
-    <!-- =========================
-         INTEREST AREAS SECTION
-    ========================== -->
-    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-14 md:py-16">
-
-      <div class="text-center mb-10">
-        <p class="text-blue-600 font-semibold mb-3">What I Like To Work On</p>
-
-        <h2 class="text-3xl md:text-4xl font-bold mb-3">
-          Interest Areas
-        </h2>
-
-        <p class="text-slate-600 max-w-2xl mx-auto">
-          These are some areas where I want to improve my skills and build meaningful work.
-        </p>
+    <!-- ================= PERSONAL INTERESTS ================= -->
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-10 md:py-14">
+      <div class="mb-9">
+        <div class="w-12 h-1 bg-blue-600 rounded-full mb-6"></div>
+        <p class="text-blue-600 font-semibold mb-3">PERSONAL INTERESTS</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">What I Enjoy Exploring</h2>
       </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Interest Card 1 -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover">
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            💻
-          </div>
-
-          <h3 class="text-xl font-bold mb-3">
-            Web Development
-          </h3>
-
-          <p class="text-slate-600 leading-7">
-            Building responsive and user-friendly websites using frontend and backend technologies.
-          </p>
-        </div>
-
-        <!-- Interest Card 2 -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover">
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            🗄️
-          </div>
-
-          <h3 class="text-xl font-bold mb-3">
-            Database Systems
-          </h3>
-
-          <p class="text-slate-600 leading-7">
-            Designing structured databases and connecting them with useful web applications.
-          </p>
-        </div>
-
-        <!-- Interest Card 3 -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover sm:col-span-2 lg:col-span-1">
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            📄
-          </div>
-
-          <h3 class="text-xl font-bold mb-3">
-            Research & Learning
-          </h3>
-
-          <p class="text-slate-600 leading-7">
-            Exploring academic research, modern technology, and new methods for solving problems.
-          </p>
-        </div>
-
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold mb-6">01</div>
+          <h3 class="text-xl font-bold mb-3">Travelling</h3>
+          <p class="text-slate-600 leading-7">Exploring new places and gaining experiences outside regular routines.</p>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold mb-6">02</div>
+          <h3 class="text-xl font-bold mb-3">Research</h3>
+          <p class="text-slate-600 leading-7">Studying analytical ideas and practical research problems.</p>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold mb-6">03</div>
+          <h3 class="text-xl font-bold mb-3">Problem Solving</h3>
+          <p class="text-slate-600 leading-7">Practising logical thinking through coding and technical challenges.</p>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold mb-6">04</div>
+          <h3 class="text-xl font-bold mb-3">New Technologies</h3>
+          <p class="text-slate-600 leading-7">Learning modern tools, methods and emerging technology ideas.</p>
+        </article>
       </div>
     </section>
 
-
-    <!-- =========================
-         CALL TO ACTION SECTION
-    ========================== -->
-    <section class="max-w-7xl mx-auto px-5 sm:px-8 pb-16">
-      <div class="bg-blue-600 text-white rounded-3xl p-8 md:p-12 text-center">
-
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Interested in my work?
-        </h2>
-
-        <p class="text-blue-100 max-w-2xl mx-auto mb-7 leading-7">
-          Explore my projects and publications to learn more about the work I have done.
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 pb-12">
+      <div class="bg-blue-600 text-white rounded-3xl px-6 py-10 md:p-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Explore My Practical Work</h2>
+        <p class="text-blue-100 leading-7 max-w-2xl mx-auto mb-8">
+          Visit my projects and publications pages to learn more about my development work and academic activities.
         </p>
-
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="projects.html"
-             class="bg-white text-blue-600 px-7 py-3 rounded-xl font-bold hover:bg-slate-100">
-            See Projects
-          </a>
-
-          <a href="publications.html"
-             class="border border-blue-300 text-white px-7 py-3 rounded-xl font-bold hover:bg-blue-700">
-            See Publications
-          </a>
+          <a href="projects.html" class="bg-white text-blue-600 px-7 py-3 rounded-xl font-bold hover:bg-slate-100 transition">View Projects</a>
+          <a href="publications.html" class="border border-blue-300 text-white px-7 py-3 rounded-xl font-bold hover:bg-blue-700 transition">View Publications</a>
         </div>
-
       </div>
     </section>
 
   </main>
 
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-5 mb-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Maruf Logo" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-bold text-slate-900">Maruf Ahammed</p>
+            <p class="text-sm text-slate-500">Software Engineer & Research Enthusiast</p>
+          </div>
+        </div>
 
-  <!-- =========================
-       FOOTER
-       Same footer will be used on every page
-  ========================== -->
-  <footer class="bg-white border-t border-slate-200 py-7">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-
-      <p class="text-slate-600">
-        © 2026 Maruf Ahammed. All rights reserved.
-      </p>
-
-      <!-- Add your real social media links later -->
-      <div class="flex gap-5 text-slate-600">
-        <a href="#" class="hover:text-blue-600">LinkedIn</a>
-        <a href="#" class="hover:text-blue-600">GitHub</a>
-        <a href="mailto:contact@marufahammed.me" class="hover:text-blue-600">Email</a>
+        <div class="flex flex-wrap justify-center gap-5 text-slate-600 font-medium">
+          <a href="https://www.linkedin.com/in/marufbytes/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">LinkedIn</a>
+          <a href="https://github.com/marufbytes" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">GitHub</a>
+          <a href="https://www.facebook.com/maruf.864" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">Facebook</a>
+          <a href="https://www.instagram.com/_maruf__404_/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">Instagram</a>
+          <a href="mailto:marufahammed496@gmail.com" class="hover:text-blue-600">Email</a>
+        </div>
       </div>
 
+      <div class="border-t border-slate-200 pt-5 text-center text-slate-500 text-sm">
+        <p>© 2026 Maruf Ahammed. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-
-  <!-- JavaScript file for mobile menu -->
+  <!-- Controls the mobile/tablet menu -->
   <script src="js/script.js"></script>
 
 </body>

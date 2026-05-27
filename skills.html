@@ -2,82 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- Responsive design for mobile and tablet -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Skills | Maruf Ahammed</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Your custom CSS -->
+  <!-- Common custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Temporary favicon. Later replace with your M logo -->
-  <link rel="icon" type="image/png" href="assets/images/profile_picture.jpg" />
+  <!-- Browser tab logo -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
 </head>
-
 <body class="bg-slate-50 text-slate-900">
 
-  <!-- =========================
-       HEADER / NAVBAR
-  ========================== -->
-  <header class="bg-white/95 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex justify-between items-center">
-
-      <!-- Website Name -->
-      <a href="index.html" class="text-2xl font-bold text-blue-600">
-        Maruf
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="Maruf Logo" class="w-11 h-11 rounded-full" />
+        <div class="hidden sm:block">
+          <p class="text-xl font-bold text-slate-900 leading-5">Maruf</p>
+          <p class="text-xs text-slate-500">Portfolio</p>
+        </div>
       </a>
 
-      <!-- Desktop Navbar -->
       <ul class="hidden lg:flex gap-8 font-medium text-slate-700">
-        <li>
-          <a href="index.html" class="hover:text-blue-600">Home</a>
-        </li>
-
-        <li>
-          <a href="about.html" class="hover:text-blue-600">About</a>
-        </li>
-
-        <!-- Current page -->
-        <li>
-          <a href="skills.html" class="text-blue-600">Skills</a>
-        </li>
-
-        <li>
-          <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        </li>
-
-        <li>
-          <a href="publications.html" class="hover:text-blue-600">Publications</a>
-        </li>
-
-        <li>
-          <a href="blogs.html" class="hover:text-blue-600">Blogs</a>
-        </li>
-
-        <li>
-          <a href="contact.html" class="hover:text-blue-600">Contact</a>
-        </li>
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+        <li><a href="skills.html" class="text-blue-600">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="publications.html" class="hover:text-blue-600">Publications</a></li>
+        <li><a href="blogs.html" class="hover:text-blue-600">Blogs</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
       </ul>
 
-      <!-- CV Button for Desktop -->
       <a href="assets/files/Maruf_Ahammed_CV.pdf" download
-         class="hidden lg:inline-block bg-blue-600 text-white px-5 py-2 rounded-xl font-semibold hover:bg-blue-700">
+         class="hidden lg:inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
         Download CV
       </a>
 
-      <!-- Three-line menu button for Mobile / Tablet -->
-      <button onclick="toggleMenu()"
-              class="lg:hidden text-3xl text-slate-800"
-              aria-label="Open menu">
-        ☰
-      </button>
+      <button onclick="toggleMenu()" class="lg:hidden text-3xl text-slate-800" aria-label="Open Menu">☰</button>
     </nav>
 
-    <!-- Mobile / Tablet Menu -->
     <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-5">
       <ul class="space-y-4 font-medium text-slate-700">
         <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
@@ -87,10 +54,9 @@
         <li><a href="publications.html" class="hover:text-blue-600">Publications</a></li>
         <li><a href="blogs.html" class="hover:text-blue-600">Blogs</a></li>
         <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
-
         <li>
           <a href="assets/files/Maruf_Ahammed_CV.pdf" download
-             class="inline-block bg-blue-600 text-white px-5 py-2 rounded-xl font-semibold hover:bg-blue-700">
+             class="inline-block bg-blue-600 text-white px-5 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
             Download CV
           </a>
         </li>
@@ -98,389 +64,130 @@
     </div>
   </header>
 
-
-  <!-- =========================
-       PAGE TITLE SECTION
-  ========================== -->
-  
-<section class="bg-white border-b border-slate-200">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-7 md:py-9 text-center">
-
-    <h1 class="text-3xl md:text-4xl font-bold mb-2">
-      Skills & Technologies
-    </h1>
-
-    <p class="text-slate-600 max-w-3xl mx-auto leading-7">
-      The technologies and tools I use for web development, database design, programming, and academic projects.
-    </p>
-
-  </div>
-</section>
-
-
-  <!-- =========================
-       MAIN CONTENT
-  ========================== -->
   <main>
 
-    <!-- =========================
-         SKILL CATEGORY CARDS
-    ========================== -->
-    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-14 md:py-20">
+    <!-- ================= SKILLS HERO ================= -->
+    <section class="bg-gradient-to-br from-white via-blue-50 to-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 md:py-12">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div>
+            <div class="w-12 h-1 bg-blue-600 rounded-full mb-6"></div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">Skills & Technologies</h1>
+            <p class="text-slate-600 text-base md:text-lg leading-8 max-w-xl">
+              The programming languages, web technologies, database tools and development concepts
+              I use in academic and practical projects.
+            </p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 md:p-7 shadow-sm">
+            <p class="text-blue-600 font-bold text-sm mb-5">PRIMARY FOCUS</p>
+            <div class="grid grid-cols-3 gap-3 md:gap-4 text-center">
+              <div class="bg-slate-50 rounded-xl px-2 py-5"><p class="text-xl md:text-2xl font-bold">Web</p><p class="text-xs sm:text-sm text-slate-500 mt-2">Frontend</p></div>
+              <div class="bg-blue-50 rounded-xl px-2 py-5"><p class="text-xl md:text-2xl font-bold text-blue-600">PHP</p><p class="text-xs sm:text-sm text-slate-500 mt-2">Backend</p></div>
+              <div class="bg-slate-50 rounded-xl px-2 py-5"><p class="text-xl md:text-2xl font-bold">SQL</p><p class="text-xs sm:text-sm text-slate-500 mt-2">Database</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ================= SKILL CARDS ================= -->
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-10 md:py-14">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Frontend Skills -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover">
-
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            🎨
-          </div>
-
-          <h2 class="text-xl font-bold mb-3">
-            Frontend Development
-          </h2>
-
-          <p class="text-slate-600 leading-7 mb-6">
-            Creating responsive and clean user interfaces for websites and web applications.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">HTML</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">CSS</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">Tailwind CSS</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">JavaScript</span>
-          </div>
-
-        </div>
-
-
-        <!-- Backend Skills -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover">
-
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            ⚙️
-          </div>
-
-          <h2 class="text-xl font-bold mb-3">
-            Backend Development
-          </h2>
-
-          <p class="text-slate-600 leading-7 mb-6">
-            Building server-side functionality, form handling, validation, and dynamic systems.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">PHP</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">AJAX</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">JSON</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">MVC</span>
-          </div>
-
-        </div>
-
-
-        <!-- Database Skills -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover md:col-span-2 lg:col-span-1">
-
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            🗄️
-          </div>
-
-          <h2 class="text-xl font-bold mb-3">
-            Database Design
-          </h2>
-
-          <p class="text-slate-600 leading-7 mb-6">
-            Designing relational databases and connecting them with web applications.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">MySQL</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">MySQLi</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">Database Design</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">SQL</span>
-          </div>
-
-        </div>
-
-
-        <!-- Programming Skills -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover">
-
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            💻
-          </div>
-
-          <h2 class="text-xl font-bold mb-3">
-            Programming
-          </h2>
-
-          <p class="text-slate-600 leading-7 mb-6">
-            Solving programming problems and developing logical thinking through coding practice.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">C++</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">Python</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">Problem Solving</span>
-          </div>
-
-        </div>
-
-
-        <!-- Tools Skills -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover">
-
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            🛠️
-          </div>
-
-          <h2 class="text-xl font-bold mb-3">
-            Tools & Platforms
-          </h2>
-
-          <p class="text-slate-600 leading-7 mb-6">
-            Tools I use for writing code, managing projects, and publishing my work.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">Git</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">GitHub</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">VS Code</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">XAMPP</span>
-          </div>
-
-        </div>
-
-
-        <!-- Research Skills -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 card-hover md:col-span-2 lg:col-span-1">
-
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-5">
-            📄
-          </div>
-
-          <h2 class="text-xl font-bold mb-3">
-            Research & Documentation
-          </h2>
-
-          <p class="text-slate-600 leading-7 mb-6">
-            Preparing academic documents, research content, project reports, and presentations.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">Research Writing</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">LaTeX</span>
-            <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg text-sm font-semibold">Documentation</span>
-          </div>
-
-        </div>
-
+        <article class="bg-white border border-slate-200 rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-start gap-4 mb-7"><div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold shrink-0">C++</div><div><h2 class="text-xl font-bold mb-1">Programming Languages</h2><p class="text-slate-500 text-sm">Logic and application building</p></div></div>
+          <p class="text-slate-600 leading-8 mb-7">Languages I use for problem solving, academic practice and software development work.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag-blue">C</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">C#</span><span class="tag">Python</span></div>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-start gap-4 mb-7"><div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold shrink-0">UI</div><div><h2 class="text-xl font-bold mb-1">Frontend Development</h2><p class="text-slate-500 text-sm">Responsive interface</p></div></div>
+          <p class="text-slate-600 leading-8 mb-7">Building clean layouts for laptop, tablet and mobile screens.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag-blue">HTML</span><span class="tag">CSS</span><span class="tag">Tailwind CSS</span><span class="tag">JavaScript</span></div>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-start gap-4 mb-7"><div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold shrink-0">PHP</div><div><h2 class="text-xl font-bold mb-1">Backend Development</h2><p class="text-slate-500 text-sm">Dynamic web systems</p></div></div>
+          <p class="text-slate-600 leading-8 mb-7">Developing form processing, validation and server-side functionality.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag-blue">PHP</span><span class="tag">MVC</span><span class="tag">Session</span><span class="tag">Cookie</span></div>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-start gap-4 mb-7"><div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold shrink-0">DB</div><div><h2 class="text-xl font-bold mb-1">Database Systems</h2><p class="text-slate-500 text-sm">Data structure and connection</p></div></div>
+          <p class="text-slate-600 leading-8 mb-7">Designing database-connected applications and handling relational data.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag-blue">MySQL</span><span class="tag">MySQLi</span><span class="tag">SQL</span></div>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-start gap-4 mb-7"><div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold shrink-0">.NET</div><div><h2 class="text-xl font-bold mb-1">Framework & Concepts</h2><p class="text-slate-500 text-sm">Application workflow</p></div></div>
+          <p class="text-slate-600 leading-8 mb-7">Concepts used in my desktop and web-based project work.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag-blue">.NET Framework</span><span class="tag">AJAX</span><span class="tag">JSON</span></div>
+        </article>
+        <article class="bg-white border border-slate-200 rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-start gap-4 mb-7"><div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold shrink-0">Git</div><div><h2 class="text-xl font-bold mb-1">Tools & Exploration</h2><p class="text-slate-500 text-sm">Workflow and research interest</p></div></div>
+          <p class="text-slate-600 leading-8 mb-7">Tools I use for project work and topics I want to explore further.</p>
+          <div class="flex flex-wrap gap-2"><span class="tag-blue">Git</span><span class="tag">GitHub</span><span class="tag">AI/ML Research</span><span class="tag">Data Analysis</span></div>
+        </article>
       </div>
     </section>
 
-
-    <!-- =========================
-         TECHNOLOGY LIST SECTION
-    ========================== -->
-    <section class="bg-white border-y border-slate-200 py-14 md:py-16">
+    <!-- ================= PROJECT APPLICATION ================= -->
+    <section class="bg-white border-y border-slate-200 py-12 md:py-14">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
-
-        <div class="text-center mb-10">
-          <p class="text-blue-600 font-semibold mb-3">
-            Technology Stack
-          </p>
-
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">
-            Tools I Work With
-          </h2>
-
-          <p class="text-slate-600">
-            A simple overview of my current technology stack.
-          </p>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div>
+            <div class="w-12 h-1 bg-blue-600 rounded-full mb-6"></div>
+            <p class="text-blue-600 font-semibold mb-3">PRACTICAL APPLICATION</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-5">Technologies Used in My Projects</h2>
+            <p class="text-slate-600 leading-8">
+              My projects allowed me to work with desktop applications, database connections,
+              responsive frontend interfaces, PHP web applications and collaborative development.
+            </p>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5"><p class="text-blue-600 font-bold text-lg mb-3">01</p><h3 class="font-bold mb-2">House Rental System</h3><p class="text-slate-600 text-sm leading-7">C#, .NET Framework and MySQL.</p></div>
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5"><p class="text-blue-600 font-bold text-lg mb-3">02</p><h3 class="font-bold mb-2">Event System</h3><p class="text-slate-600 text-sm leading-7">PHP, AJAX, JSON and MySQLi.</p></div>
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5"><p class="text-blue-600 font-bold text-lg mb-3">03</p><h3 class="font-bold mb-2">Payoo MFS</h3><p class="text-slate-600 text-sm leading-7">HTML, Tailwind CSS and JavaScript.</p></div>
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5"><p class="text-blue-600 font-bold text-lg mb-3">04</p><h3 class="font-bold mb-2">Research Interest</h3><p class="text-slate-600 text-sm leading-7">AI/ML analysis and research ideas.</p></div>
+          </div>
         </div>
-
-        <!-- Individual technology boxes -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">🌐</p>
-            <p class="font-semibold">HTML</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">🎨</p>
-            <p class="font-semibold">CSS</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">🌬️</p>
-            <p class="font-semibold">Tailwind</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">📜</p>
-            <p class="font-semibold">JavaScript</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">🐘</p>
-            <p class="font-semibold">PHP</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">🗃️</p>
-            <p class="font-semibold">MySQL</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">🔄</p>
-            <p class="font-semibold">AJAX</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">📦</p>
-            <p class="font-semibold">JSON</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">🔗</p>
-            <p class="font-semibold">GitHub</p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center card-hover">
-            <p class="text-3xl mb-2">⌨️</p>
-            <p class="font-semibold">C++</p>
-          </div>
-
-        </div>
-
       </div>
     </section>
 
-
-    <!-- =========================
-         LEARNING SECTION
-    ========================== -->
-    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-14 md:py-16">
-
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-
-        <!-- Section Text -->
-        <div>
-          <p class="text-blue-600 font-semibold mb-3">
-            Continuous Learning
-          </p>
-
-          <h2 class="text-3xl md:text-4xl font-bold mb-5">
-            Improving My Skills Through Projects
-          </h2>
-
-          <p class="text-slate-600 leading-8 mb-5">
-            I believe that the best way to learn technology is by building
-            projects and solving real problems. My projects help me practise
-            frontend design, backend development, databases, and user-friendly
-            application structure.
-          </p>
-
-          <p class="text-slate-600 leading-8">
-            I am continuously learning new methods and improving my coding,
-            documentation, and problem-solving skills.
-          </p>
-        </div>
-
-        <!-- Simple Focus List -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8">
-
-          <h3 class="text-xl font-bold mb-6">
-            Current Focus
-          </h3>
-
-          <div class="space-y-4">
-
-            <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-4">
-              <span class="text-blue-600 font-bold">01</span>
-              <p class="text-slate-700">
-                Building responsive and formal portfolio websites.
-              </p>
-            </div>
-
-            <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-4">
-              <span class="text-blue-600 font-bold">02</span>
-              <p class="text-slate-700">
-                Developing PHP and MySQL database-based applications.
-              </p>
-            </div>
-
-            <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-4">
-              <span class="text-blue-600 font-bold">03</span>
-              <p class="text-slate-700">
-                Improving programming and problem-solving knowledge.
-              </p>
-            </div>
-
-            <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-4">
-              <span class="text-blue-600 font-bold">04</span>
-              <p class="text-slate-700">
-                Working on research papers and academic projects.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =========================
-         CALL TO ACTION SECTION
-    ========================== -->
-    <section class="max-w-7xl mx-auto px-5 sm:px-8 pb-16">
-      <div class="bg-blue-600 text-white rounded-3xl p-8 md:p-12 text-center">
-
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          See These Skills in Action
-        </h2>
-
-        <p class="text-blue-100 max-w-2xl mx-auto mb-7 leading-7">
-          Visit my projects page to see how I apply these technologies in practical work.
-        </p>
-
-        <a href="projects.html"
-           class="inline-block bg-white text-blue-600 px-7 py-3 rounded-xl font-bold hover:bg-slate-100">
-          View My Projects
-        </a>
-
+    <!-- ================= CTA ================= -->
+    <section class="max-w-7xl mx-auto px-5 sm:px-8 py-10 md:py-12">
+      <div class="bg-blue-600 text-white rounded-3xl px-6 py-10 md:p-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">See These Skills in Action</h2>
+        <p class="text-blue-100 max-w-2xl mx-auto leading-7 mb-8">Visit my projects page to see how I apply these technologies in completed applications and responsive web interfaces.</p>
+        <a href="projects.html" class="inline-block bg-white text-blue-600 px-7 py-3 rounded-xl font-bold hover:bg-slate-100 transition">View My Projects</a>
       </div>
     </section>
 
   </main>
 
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-5 mb-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Maruf Logo" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-bold text-slate-900">Maruf Ahammed</p>
+            <p class="text-sm text-slate-500">Software Engineer & Research Enthusiast</p>
+          </div>
+        </div>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer class="bg-white border-t border-slate-200 py-7">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-
-      <p class="text-slate-600">
-        © 2026 Maruf Ahammed. All rights reserved.
-      </p>
-
-      <!-- Replace # with your real links later -->
-      <div class="flex gap-5 text-slate-600">
-        <a href="#" class="hover:text-blue-600">LinkedIn</a>
-        <a href="#" class="hover:text-blue-600">GitHub</a>
-        <a href="mailto:contact@marufahammed.me" class="hover:text-blue-600">Email</a>
+        <div class="flex flex-wrap justify-center gap-5 text-slate-600 font-medium">
+          <a href="https://www.linkedin.com/in/marufbytes/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">LinkedIn</a>
+          <a href="https://github.com/marufbytes" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">GitHub</a>
+          <a href="https://www.facebook.com/maruf.864" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">Facebook</a>
+          <a href="https://www.instagram.com/_maruf__404_/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">Instagram</a>
+          <a href="mailto:marufahammed496@gmail.com" class="hover:text-blue-600">Email</a>
+        </div>
       </div>
 
+      <div class="border-t border-slate-200 pt-5 text-center text-slate-500 text-sm">
+        <p>© 2026 Maruf Ahammed. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-
-  <!-- This file controls the mobile menu -->
+  <!-- Controls the mobile/tablet menu -->
   <script src="js/script.js"></script>
 
 </body>

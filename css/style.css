@@ -1,28 +1,70 @@
-/* Smooth scrolling when clicking navbar links */
+/* Common extra CSS for all pages */
+
+/* Smooth scrolling effect */
 html {
   scroll-behavior: smooth;
 }
 
-/* Common body font */
+/* Common font for the website */
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Small hover effect for cards */
-.card-hover {
-  transition: 0.3s;
+/* Responsive image rule */
+img {
+  max-width: 100%;
 }
 
-.card-hover:hover {
-  transform: translateY(-5px);
-}
-
-/* Mobile menu link spacing */
+/* Mobile menu links take full available line */
 #mobileMenu a {
   display: block;
 }
 
-/* Make image responsive */
-img {
-  max-width: 100%;
+/* Used in skills and project technology badges */
+.tag {
+  background-color: #f1f5f9;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.tag-blue {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Contact social buttons */
+.social-btn {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: #334155;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Contact form input styling */
+.form-input {
+  width: 100%;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #dbeafe;
 }
