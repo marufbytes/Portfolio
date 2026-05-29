@@ -23,7 +23,7 @@
         <img src="assets/images/logo.png" alt="Maruf Logo" class="w-11 h-11 rounded-full" />
         <div class="hidden sm:block">
           <p class="text-xl font-bold text-slate-900 leading-5">Maruf</p>
-          <p class="text-xs text-slate-500">Portfolio</p>
+          <p class="text-xs text-slate-500">Ahammed</p>
         </div>
       </a>
 
@@ -96,10 +96,9 @@
                 <p class="text-slate-500">Research Enthusiast</p>
               </div>
             </div>
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid sm:grid-cols-3 gap-3">
               <div class="bg-slate-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">UNIVERSITY</p><p class="font-bold">AIUB</p></div>
               <div class="bg-blue-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">SEMESTER</p><p class="font-bold text-blue-600">9th</p></div>
-              <div class="bg-slate-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">CGPA</p><p class="font-bold">3.89</p></div>
               <div class="bg-slate-50 rounded-xl p-4"><p class="text-xs text-slate-500 font-semibold mb-2">LOCATION</p><p class="font-bold">Dhaka</p></div>
             </div>
           </div>
@@ -135,7 +134,7 @@
       </div>
     </section>
 
-    <!-- ================= ACADEMIC TIMELINE: ADDED SSC AND HSC HERE ================= -->
+    <!-- ================= ACADEMIC TIMELINE ================= -->
     <section class="bg-white border-y border-slate-200 py-12 md:py-14">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
         <div class="mb-9">
@@ -143,48 +142,234 @@
           <p class="text-blue-600 font-semibold mb-3">EDUCATION</p>
           <h2 class="text-3xl md:text-4xl font-bold mb-3">Academic Background</h2>
           <p class="text-slate-600 leading-7 max-w-2xl">
-            My educational journey from secondary studies to my current undergraduate programme.
+            My educational journey from primary studies to my current undergraduate programme.
           </p>
         </div>
 
+        <!-- First Row: University, College and School -->
         <div class="grid lg:grid-cols-3 gap-6">
-          <article class="bg-blue-600 text-white rounded-2xl p-7">
-            <div class="flex justify-between items-center mb-6">
-              <span class="bg-white/15 border border-white/20 px-3 py-2 rounded-full text-sm font-semibold">Current</span>
-              <span class="text-blue-100 font-semibold">9th Semester</span>
+
+          <!-- University -->
+          <article class="bg-blue-600 text-white rounded-2xl p-6 flex flex-col h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex justify-between items-center gap-4 mb-5">
+              <div class="bg-white rounded-xl p-2 shrink-0">
+                <img src="assets/images/aiub_logo.png"
+                     alt="American International University-Bangladesh Logo"
+                     class="w-14 h-14 object-contain" />
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  BSc
+                </span>
+                <span class="text-blue-100 text-sm font-semibold">
+                  Current
+                </span>
+              </div>
             </div>
-            <p class="text-blue-100 font-semibold mb-3">UNDERGRADUATE</p>
-            <h3 class="text-xl font-bold leading-8 mb-3">BSc in Computer Science and Engineering</h3>
-            <p class="text-blue-100 leading-7 mb-6">American International University-Bangladesh</p>
-            <div class="bg-white/10 rounded-xl p-4">
-              <p class="text-sm text-blue-100 mb-1">Current CGPA</p>
-              <p class="text-2xl font-bold">3.89</p>
+
+            <div class="flex-1">
+              <p class="text-blue-100 text-sm font-semibold mb-2">UNDERGRADUATE</p>
+              <h3 class="text-xl font-bold leading-8 mb-2">
+                BSc in Computer Science and Engineering
+              </h3>
+              <p class="text-blue-100 leading-7 mb-3">
+                American International University-Bangladesh
+              </p>
+              <p class="text-blue-100 text-sm leading-6">
+                Location: Kuril, Dhaka, Bangladesh
+              </p>
+            </div>
+
+            <div class="border-t border-white/20 pt-4 mt-5 flex flex-wrap items-center gap-3">
+              <p class="text-blue-100 font-semibold text-sm">Visit →</p>
+              <a href="https://www.aiub.edu/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-100 transition">
+                Website
+              </a>
+              <a href="https://www.facebook.com/aiub.edu"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="border border-white/40 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-white/10 transition">
+                Facebook
+              </a>
             </div>
           </article>
 
-          <!-- HSC: Edit this card later if your college spelling changes -->
-          <article class="bg-slate-50 border border-slate-200 rounded-2xl p-7 transition duration-300 hover:shadow-lg">
-            <div class="flex justify-between items-center mb-6">
-              <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-full text-sm font-semibold">HSC</span>
-              <span class="text-slate-500 font-semibold">2022</span>
+          <!-- HSC -->
+          <article class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex justify-between items-center gap-4 mb-5">
+              <div class="bg-white border border-slate-200 rounded-xl p-2 shrink-0">
+                <img src="assets/images/milestone_logo.jpg"
+                     alt="Milestone College Logo"
+                     class="w-14 h-14 object-contain" />
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  HSC
+                </span>
+                <span class="text-slate-500 text-sm font-semibold">
+                  2022
+                </span>
+              </div>
             </div>
-            <p class="text-blue-600 font-semibold mb-3">HIGHER SECONDARY CERTIFICATE</p>
-            <h3 class="text-xl font-bold leading-8 mb-3">Milestone College</h3>
-            <p class="text-slate-600 leading-7 mb-6">Group: Science</p>
-            <p class="text-sm text-slate-500">Passing Year: 2022</p>
+
+            <div class="flex-1">
+              <p class="text-blue-600 text-sm font-semibold mb-2">HIGHER SECONDARY CERTIFICATE</p>
+              <h3 class="text-xl font-bold leading-8 mb-2">Milestone College</h3>
+              <p class="text-slate-600 leading-7 mb-2">Group: Science</p>
+              <p class="text-slate-500 text-sm leading-6">
+                Location: Diabari, Uttara, Dhaka, Bangladesh
+              </p>
+            </div>
+
+            <div class="border-t border-slate-200 pt-4 mt-5 flex flex-wrap items-center gap-3">
+              <p class="text-slate-500 font-semibold text-sm">Visit →</p>
+              <a href="https://www.milestonecollege.com/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+                Website
+              </a>
+              <a href="https://www.facebook.com/MilestoneCollegeUttara"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:border-blue-600 hover:text-blue-600 transition">
+                Facebook
+              </a>
+            </div>
           </article>
 
-          <!-- SSC: Edit this card later if your school spelling changes -->
-          <article class="bg-slate-50 border border-slate-200 rounded-2xl p-7 transition duration-300 hover:shadow-lg">
-            <div class="flex justify-between items-center mb-6">
-              <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-full text-sm font-semibold">SSC</span>
-              <span class="text-slate-500 font-semibold">2020</span>
+          <!-- SSC -->
+          <article class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex justify-between items-center gap-4 mb-5">
+              <div class="bg-white border border-slate-200 rounded-xl p-2 shrink-0">
+                <img src="assets/images/mmhs_logo.jpg"
+                     alt="Maniknagar Model High School Logo"
+                     class="w-14 h-14 object-contain" />
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  SSC
+                </span>
+                <span class="text-slate-500 text-sm font-semibold">
+                  2020
+                </span>
+              </div>
             </div>
-            <p class="text-blue-600 font-semibold mb-3">SECONDARY SCHOOL CERTIFICATE</p>
-            <h3 class="text-xl font-bold leading-8 mb-3">Maniknagar Model High School</h3>
-            <p class="text-slate-600 leading-7 mb-6">Group: Science</p>
-            <p class="text-sm text-slate-500">Passing Year: 2020</p>
+
+            <div class="flex-1">
+              <p class="text-blue-600 text-sm font-semibold mb-2">SECONDARY SCHOOL CERTIFICATE</p>
+              <h3 class="text-xl font-bold leading-8 mb-2">Maniknagar Model High School</h3>
+              <p class="text-slate-600 leading-7 mb-2">Group: Science</p>
+              <p class="text-slate-500 text-sm leading-6">
+                Location: Maniknagar, Dhaka, Bangladesh
+              </p>
+            </div>
+
+            <div class="border-t border-slate-200 pt-4 mt-5 flex flex-wrap items-center gap-3">
+              <p class="text-slate-500 font-semibold text-sm">Visit →</p>
+              <a href="https://www.sohopathi.com/maniknagar-model-high-school/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+                Website
+              </a>
+              <a href="https://www.facebook.com/mmhs1996"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:border-blue-600 hover:text-blue-600 transition">
+                Facebook
+              </a>
+            </div>
           </article>
+
+        </div>
+
+        <!-- Second Row: JSC and PSC -->
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-6">
+
+          <!-- JSC -->
+          <article class="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex justify-between items-center gap-4 mb-5">
+              <div class="bg-white border border-slate-200 rounded-xl p-2 shrink-0">
+                <img src="assets/images/mmhs_logo.jpg"
+                     alt="Maniknagar Model High School Logo"
+                     class="w-14 h-14 object-contain" />
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  JSC
+                </span>
+                <span class="text-slate-500 text-sm font-semibold">
+                  2017
+                </span>
+              </div>
+            </div>
+
+            <div class="flex-1">
+              <p class="text-blue-600 text-sm font-semibold mb-2">JUNIOR SCHOOL CERTIFICATE</p>
+              <h3 class="text-xl font-bold leading-8 mb-2">Maniknagar Model High School</h3>
+              <p class="text-slate-600 leading-7 mb-2">Group: Science</p>
+              <p class="text-slate-500 text-sm leading-6">
+                Location: Maniknagar, Dhaka, Bangladesh
+              </p>
+            </div>
+
+            <div class="border-t border-slate-200 pt-4 mt-5 flex flex-wrap items-center gap-3">
+              <p class="text-slate-500 font-semibold text-sm">Visit →</p>
+              <a href="https://www.sohopathi.com/maniknagar-model-high-school/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+                Website
+              </a>
+              <a href="https://www.facebook.com/mmhs1996"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:border-blue-600 hover:text-blue-600 transition">
+                Facebook
+              </a>
+            </div>
+          </article>
+
+          <!-- PSC: no website or Facebook page supplied -->
+          <article class="bg-white border border-blue-100 rounded-2xl p-6 flex flex-col h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex justify-between items-center gap-4 mb-5">
+              <div class="w-[74px] h-[74px] bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                <span class="text-2xl font-bold">P</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+                  PSC
+                </span>
+                <span class="text-slate-500 text-sm font-semibold">
+                  2014
+                </span>
+              </div>
+            </div>
+
+            <div class="flex-1">
+              <p class="text-blue-600 text-sm font-semibold mb-2">PRIMARY SCHOOL CERTIFICATE</p>
+              <h3 class="text-xl font-bold leading-8 mb-2">Titia Government Primary School</h3>
+              <p class="text-slate-500 text-sm leading-6">
+                Location: Titia, Homna, Cumilla, Bangladesh
+              </p>
+            </div>
+
+            <div class="border-t border-blue-100 pt-4 mt-5">
+              <p class="text-slate-500 text-sm font-medium">
+                Primary education background
+              </p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
